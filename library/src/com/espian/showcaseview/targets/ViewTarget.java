@@ -1,6 +1,7 @@
 package com.espian.showcaseview.targets;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.graphics.Point;
 import android.view.View;
 
@@ -10,6 +11,10 @@ public class ViewTarget implements Target {
 
     public ViewTarget(View view) {
         mView = view;
+    }
+    
+    public ViewTarget(int viewId, Dialog dialog) {
+        mView = dialog.findViewById(viewId);
     }
 
     public ViewTarget(int viewId, Activity activity) {
